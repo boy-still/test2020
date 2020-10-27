@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/hw_index.css" %}" >
+    <link rel="icon" href="{% static "img/hw.ico" %}">
+    <script src="{% static "js/hw_index.js" %}"></script>
+</head>
+<body>
+<script language="JavaScript">
+    function myrefresh() {
+        window.location.reload();
+    }
+    setInterval('myrefresh()',1000);
+</script>
+<div id="banner">
+    <ul id="cate_box" class="lf">
+        <li>
+            <p>
+                <h1>您的检测数据为：</h1>
+                        <span>{{msg}}</span>
+            </p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
